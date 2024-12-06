@@ -1,8 +1,11 @@
 import json
 from groq import Groq
-import re
+import re, os
+from dotenv import load_dotenv
 
-client = Groq(api_key="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")
+load_dotenv()
+api_Key = os.getenv("GROQ_KEY")
+client = Groq(api_key=api_Key)
 
 def user_info_agent(user_message: str, message_history: list) -> str:
     """
