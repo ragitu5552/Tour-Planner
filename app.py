@@ -17,16 +17,16 @@ def update_preferences():
         st.session_state.preferences.update(extracted_prefs)  
 
 def main():  
-    st.title("🌍 One-Day Tour Planner")  
+    st.title("🌍 Tour Planner")  
 
     # Initialize session state  
     init_session_state()  
 
     # Sidebar with preferences display  
     with st.sidebar:  
-        st.title("Current Preferences")  
-        if st.session_state.preferences:  
-            st.json(st.session_state.preferences)  
+        # st.title("Current Preferences")  
+        # if st.session_state.preferences:  
+        #     st.json(st.session_state.preferences)  
 
         if st.button("Clear Chat"):  
             st.session_state.messages = []  
