@@ -13,16 +13,12 @@ def process_message(user_message: str, message_history: list) -> str:
         str: Assistant's response  
     """  
 
-    # Get response from user_info_agent  
     response = user_info_agent(user_message, message_history)  
 
-    # Combine all user messages for preference extraction  
     combined_messages = " ".join([msg['content'] for msg in message_history + [{"role": "user", "content": user_message}] if msg['role'] == "user"])  
 
-    # Extract preferences  
     preferences = extract_preferences(combined_messages)  
-
-    # Check if all preferences are collected and have values  
+ 
     if isinstance(preferences, dict) and "error" not in preferences:  
         all_fields_present = all([  
             preferences.get("city"),  
