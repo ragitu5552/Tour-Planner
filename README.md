@@ -53,5 +53,5 @@ streamlit run app.py
         * Store user preferences in the graph.
     * **Personalized Recommendations:** 
         * Use the graph to retrieve relevant information (e.g., persona preferences, user preferences) for personalized recommendations.
-
-![Flowchart of the Tour Planning Process](tour_plan.png)
+**Implementation Workflow**
+<img src="tour_plan.png" alt="Flowchart of the Tour Planning Process" width="300px">
